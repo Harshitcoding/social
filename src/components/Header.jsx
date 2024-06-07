@@ -40,7 +40,7 @@ function Navbar() {
           <div className="absolute right-0 mt-2 w-48 bg-white text-black rounded-md shadow-lg">
             <ul>
               <li>
-                <button onClick={handleLogout} className="px-4 py-2 hover:bg-gray-200 w-full text-left">Singin</button>
+                <button onClick={handleLogout} className="px-4 py-2 hover:bg-gray-200 w-full text-left">Logout</button>
               </li>
             </ul>
           </div>
