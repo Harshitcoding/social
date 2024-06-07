@@ -4,12 +4,14 @@ import { ref, uploadBytes, getDownloadURL } from 'firebase/storage';
 import { storage } from '../firebase'; // Adjust the path as needed
 import { v4 as uuidv4 } from 'uuid';
 import { backend_Url } from '../config';
+import { useNavigate } from 'react-router-dom';
 
 function PostInput() {
   const [caption, setCaption] = useState('');
   const [imageUpload, setImageUpload] = useState(null);
   const [progress, setProgress] = useState(0);
 
+  const navigate = useNavigate()
   const uploadFile = async () => {
     if (imageUpload == null) return;
     const imageRef = ref(storage, `images/${imageUpload.name + uuidv4()}`);
@@ -46,6 +48,7 @@ function PostInput() {
         // Handle successful submission
         setCaption('');
         setProgress(0);
+        navigate('/')
       } catch (error) {
         console.error('Error creating post:', error);
         // Handle errors appropriately
