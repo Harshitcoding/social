@@ -18,7 +18,7 @@ function PostInput() {
     try {
       const snapshot = await uploadBytes(imageRef, imageUpload);
       const url = await getDownloadURL(snapshot.ref);
-      setImageUpload(null); // Reset file input
+      setImageUpload(null); 
       return url;
     } catch (error) {
       console.error('Error uploading file:', error);
