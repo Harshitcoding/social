@@ -21,6 +21,10 @@ function Signin() {
     }
   };
 
+  function redirectToSignup () {
+    navigate("/signup")
+  }
+
   return (
    
     
@@ -33,7 +37,7 @@ function Signin() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
-            className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+            className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-black"
           />
         </div>
         <div className="password-field flex items-center border border-black rounded px-3 py-2">
@@ -42,12 +46,18 @@ function Signin() {
             placeholder="Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
-            className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent"
+            className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-black"
           />
         </div>
         <button onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700 ">
           Sign In
         </button>
+        <div className="account-info text-sm flex items-center space-x-1">
+          dont have an account?
+          <button onClick={redirectToSignup} className="text-blue-500 underline">
+            Sign up
+          </button>
+        </div>
       </div>
     </div>
    

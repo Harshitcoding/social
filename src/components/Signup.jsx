@@ -28,6 +28,10 @@ function Signup() {
     }
   };
 
+  const redirectToSignin = () => {
+    navigate("/signin");
+  };
+
   return (
     <div className="signup-container flex flex-col items-center justify-center min-h-screen bg-gradient-to-r from-indigo-500 ">
       <h1 className="text-3xl font-bold mb-6 text-white">Sign Up</h1>
@@ -62,6 +66,12 @@ function Signup() {
         <button onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
           Sign Up
         </button>
+        <div className="account-info text-sm flex items-center space-x-1">
+          Already have an account?
+          <button onClick={redirectToSignin} className="text-blue-500 underline">
+            Sign In
+          </button>
+        </div>
       </div>
     </div>
   );
