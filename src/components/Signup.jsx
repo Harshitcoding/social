@@ -42,6 +42,7 @@ function Signup() {
             placeholder="Name"
             value={name}
             onChange={(e) => setName(e.target.value)}
+            required
             className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-black"
           />
         </div>
@@ -51,6 +52,7 @@ function Signup() {
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            required
             className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-black"
           />
         </div>
@@ -61,6 +63,7 @@ function Signup() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             className="w-full focus:outline-none focus:ring-1 focus:ring-blue-500 focus:border-transparent text-black"
+            required
           />
         </div>
         <button onClick={handleSubmit} className="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-700">
